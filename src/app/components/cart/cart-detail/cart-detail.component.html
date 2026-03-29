@@ -1,0 +1,9 @@
+<div class="cart-items-wrapper">
+    @for(cartItem of cartItems(); track cartItem.product.id) {
+    <app-cart-item [item]="cartItem">
+        <app-cart-item-quantity [item]="cartItem" />
+    </app-cart-item>
+    }
+</div>
+<div class="total">Total: {{ total() | currency:'USD' }}</div>
+<button matButton="outlined" [disabled]="isCheckoutDisabled()" (click)="checkout()">Checkout</button>

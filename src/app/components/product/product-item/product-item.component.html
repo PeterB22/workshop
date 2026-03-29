@@ -1,0 +1,10 @@
+<a [routerLink]="['/product', product().id]" class="card" href="#">
+    @if (product()!.isInCart) {
+        <div class="in-cart-indicator"></div>
+    }
+    <img [src]="product().imageUrl" alt="{{ product().name }}" class="user-avatar" />
+    <div class="card-content">
+        <h3 class="title">{{ product().name }}</h3>
+        <span class="description">{{ product().description }}</span>
+    </div>
+</a>

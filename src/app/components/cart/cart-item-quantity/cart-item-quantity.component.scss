@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 100px;
+    height: 100%;
+    mat-icon:hover {
+        cursor: pointer;
+    }
+}

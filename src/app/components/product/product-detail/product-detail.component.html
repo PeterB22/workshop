@@ -1,0 +1,26 @@
+@if (product()) {
+<div class="product-detail-card">
+    <div class="image-wrapper">
+        <img [src]="product()!.imageUrl" [alt]="product()!.name" />
+    </div>
+    <div class="info-wrapper">
+        <h2>{{ product()!.name }}</h2>
+        <p>{{ product()!.description }}</p>
+        <p>Category: <em>{{ product()!.category }}</em></p>
+        <div class="rating-count-wrapper">
+        <ng-ratings [average]="product()!.rating.rate" [items]="5" [readOnly]="true"></ng-ratings>
+            <mat-icon>person</mat-icon>
+            <span class="count">({{ product()!.rating.count }})</span>
+        </div>
+        <div class="price">Price: {{ product()!.price | currency:'USD' }}</div>
+        <button matButton="outlined" [disabled]="isInCart()" (click)="addToCart(product()!)">
+            <mat-icon>plus</mat-icon>
+            Add to Cart
+        </button>
+    </div>
+</div>
+} @else {
+<div class="loading-placeholder">
+    Loading product details...
+</div>
+}

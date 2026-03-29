@@ -1,0 +1,5 @@
+@if (cartCount()! > 0) {
+    <mat-icon matBadge="{{ cartCount() }}" aria-hidden="false" aria-label="Shopping cart with {{ cartCount() }} items">shopping_cart</mat-icon>
+} @else {
+    <mat-icon>shopping_cart</mat-icon>
+}

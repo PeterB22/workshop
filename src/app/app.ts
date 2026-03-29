@@ -1,12 +1,18 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { CartViewComponent } from "./components/cart/cart-view/cart-view.component";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+    selector: 'app-root',
+    templateUrl: './app.html',
+    styleUrl: './app.scss',
+    imports: [RouterOutlet, CartViewComponent]
 })
 export class App {
-  protected readonly title = signal('workshop');
+
+    private roter = inject(Router);
+
+    onHeaderClick(): void {
+        this.roter.navigate(['/']);
+    }
 }

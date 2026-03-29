@@ -1,0 +1,6 @@
+<app-product-filter />
+<app-product-list>
+    @for(product of products(); track product.id) {
+        <app-product-item [product]="product" />
+    }
+</app-product-list>
