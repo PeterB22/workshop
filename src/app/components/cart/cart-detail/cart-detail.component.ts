@@ -1,43 +1,46 @@
-import { Component, computed, effect, HostBinding, inject, Signal } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { selectCartItems } from '../../../core/store/cart/cart.selectors';
+import { Component, effect, inject, Signal } from '@angular/core';
 import { CartItemComponent } from "../cart-item/cart-item.component";
 import { CurrencyPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { CartItem } from '../../../core/store/cart/cart.reducer';
 import { CartItemQuantityComponent } from '../cart-item-quantity/cart-item-quantity.component';
 import { OverlayRef } from '@angular/cdk/overlay';
-import { checkoutCart } from '../../../core/store/cart/cart.actions';
+import { CartDatasource } from './cart-detail.datasource.service';
 
 @Component({
     selector: 'app-cart-detail',
     templateUrl: './cart-detail.component.html',
     styleUrls: ['./cart-detail.component.scss'],
-    imports: [CartItemComponent, CartItemQuantityComponent, CurrencyPipe, MatButtonModule]
+    imports: [CartItemComponent, CartItemQuantityComponent, CurrencyPipe, MatButtonModule],
+    providers: [CartDatasource]
 })
 export class CartDetailComponent {
 
-    private store = inject(Store);
+    private cartDs = inject(CartDatasource);
     private overlayRef = inject(OverlayRef);
-    cartItems: Signal<CartItem[] | undefined> = toSignal(this.store.pipe(select(selectCartItems)));
-    total: Signal<number> = computed(() => {
-        const items = this.cartItems();
-        return items ? items.reduce((sum, item) => sum + (item.product.price * item.quantity), 0) : 0;
-    });
-    isCheckoutDisabled: Signal<boolean> = computed(() => {
-        const noItem = !this.cartItems() || this.cartItems()!.length === 0
-        const noPrice = this.total() === 0;
-        return noItem || noPrice;
-    });
+    cartItems: Signal<CartItem[] | undefined> = this.cartDs.cartItems;
+    total: Signal<number> = this.cartDs.total;
+    isCheckoutDisabled: Signal<boolean> = this.cartDs.isCheckoutDisabled;
     autoCloseOverlay = effect(() => {
         if (this.cartItems() && this.cartItems()!.length === 0) {
             this.overlayRef.dispose();
         }
     });
 
+    removeItem(productId: string) {
+        this.cartDs.removeItem(productId);
+    }
+
+    quantityChange(event: { productId: string, change: 'increase' | 'decrease' }) {
+        if (event.change === 'increase') {
+            this.cartDs.increaseQuantity(event.productId);
+        } else {
+            this.cartDs.decreaseQuantity(event.productId);
+        }
+    }
+
     checkout() {
-        this.store.dispatch(checkoutCart());
+        this.cartDs.checkout();
         this.overlayRef.dispose();
     }
 }

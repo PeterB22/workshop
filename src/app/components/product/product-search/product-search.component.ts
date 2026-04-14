@@ -1,24 +1,21 @@
-import { Component, inject, OnInit, Signal } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { select, Store } from '@ngrx/store';
+import { Component, inject, OnInit } from '@angular/core';
 import { ProductListComponent } from '../product-list/product-list.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { ProductFilterComponent } from '../product-filter/product-filter.component';
-import { ProductWithExtensions } from '../../../core/models/product.model';
-import { loadProducts } from '../../../core/store/product/product.actions';
-import { selectProductsWithCartFlag } from '../../../core/store/product/product.selectors';
+import { ProductSearchDatasource } from './product-search.datasource.service';
 
 @Component({
     selector: 'app-product-search',
     templateUrl: './product-search.component.html',
     styleUrls: ['./product-search.component.scss'],
-    imports: [ProductListComponent, ProductItemComponent, ProductFilterComponent]
+    imports: [ProductListComponent, ProductItemComponent, ProductFilterComponent],
+    providers: [ProductSearchDatasource]
 })
 export class ProductSearchComponent implements OnInit {
-    private store = inject(Store);
-    products: Signal<ProductWithExtensions[] | undefined> = toSignal(this.store.pipe(select(selectProductsWithCartFlag)));
+    private datasource = inject(ProductSearchDatasource);
+    products = this.datasource.products;
 
     ngOnInit(): void {
-        this.store.dispatch(loadProducts());
+        this.datasource.loadProducts();
     }
 }

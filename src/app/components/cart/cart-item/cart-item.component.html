@@ -1,7 +1,5 @@
 <div class="cart-item-wrapper">
-    <div class="image-wrapper">
-        <img [src]="item().product.imageUrl" [alt]="item().product.name" />
-    </div>
+    <app-product-image [product]="item().product"></app-product-image>
     <div class="info-wrapper">
         <h2>{{ item().product.name }}</h2>
         <div class="price">Price: {{ item().product.price | currency:'USD' }}</div>

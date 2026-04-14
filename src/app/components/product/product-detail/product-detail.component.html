@@ -1,8 +1,6 @@
 @if (product()) {
 <div class="product-detail-card">
-    <div class="image-wrapper">
-        <img [src]="product()!.imageUrl" [alt]="product()!.name" />
-    </div>
+    <app-product-image [product]="product()!"></app-product-image>
     <div class="info-wrapper">
         <h2>{{ product()!.name }}</h2>
         <p>{{ product()!.description }}</p>

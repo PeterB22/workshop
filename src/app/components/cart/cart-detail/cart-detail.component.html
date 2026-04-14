@@ -1,7 +1,7 @@
 <div class="cart-items-wrapper">
     @for(cartItem of cartItems(); track cartItem.product.id) {
-    <app-cart-item [item]="cartItem">
-        <app-cart-item-quantity [item]="cartItem" />
+    <app-cart-item [item]="cartItem" (remove)="removeItem($event)">
+        <app-cart-item-quantity [item]="cartItem" (quantityChange)="quantityChange($event)"/>
     </app-cart-item>
     }
 </div>

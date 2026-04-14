@@ -2,9 +2,10 @@
     @if (product()!.isInCart) {
         <div class="in-cart-indicator"></div>
     }
-    <img [src]="product().imageUrl" alt="{{ product().name }}" class="user-avatar" />
+    <app-product-image [product]="product()!"></app-product-image>
     <div class="card-content">
         <h3 class="title">{{ product().name }}</h3>
         <span class="description">{{ product().description }}</span>
+        <em class="price">{{ product().price | currency:'USD' }}</em>
     </div>
 </a>
