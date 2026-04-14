@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Bluetooth Headphones",
+    "price": 59.99,
+    "description": "Experience high‑fidelity sound with these over‑ear Bluetooth headphones. Designed for comfort, they feature memory foam ear cushions and a lightweight frame, making them perfect for long listening sessions. Active noise cancellation ensures you can enjoy your music without distractions, while the built‑in microphone allows hands‑free calls.",
+    "category": "electronics",
+    "image": "https://picsum.photos/250/120",
+    "rating": { "rate": 4.5, "count": 120 }
+  },
+  {
+    "id": 2,
+    "title": "Men's Casual Sneakers",
+    "price": 42.5,
+    "description": "These casual sneakers are perfect for everyday wear, combining comfort with style. Made from breathable materials, they keep your feet cool and dry all day. The flexible rubber sole provides excellent traction, while the minimalist design pairs effortlessly with jeans, shorts, or casual trousers.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/220/160",
+    "rating": { "rate": 4.2, "count": 95 }
+  },
+  {
+    "id": 3,
+    "title": "Cotton Summer Dress",
+    "price": 29.99,
+    "description": "Stay cool and stylish with this lightweight cotton summer dress. Featuring a relaxed fit and breathable fabric, it’s perfect for hot days or casual outings. The versatile design can be dressed up with accessories or kept simple for everyday wear, making it a wardrobe essential for the season.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/110/300",
+    "rating": { "rate": 4.0, "count": 45 }
+  },
+  {
+    "id": 4,
+    "title": "Smart Watch Series 6",
+    "price": 199.99,
+    "description": "Track your fitness, notifications, and more with the Smart Watch Series 6. This sleek wearable offers heart rate monitoring, GPS tracking, and customizable watch faces. Its durable, water‑resistant design ensures it keeps up with your daily activities, whether at the gym, office, or outdoors.",
+    "category": "electronics",
+    "image": "https://picsum.photos/200/140",
+    "rating": { "rate": 4.7, "count": 210 }
+  },
+  {
+    "id": 5,
+    "title": "Men's Leather Wallet",
+    "price": 24.5,
+    "description": "Crafted from premium leather, this wallet is designed to last. It features multiple compartments for cash, cards, and IDs, keeping your essentials organized. Its sleek and minimalist design makes it a stylish accessory for everyday use or special occasions.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/400/270",
+    "rating": { "rate": 4.1, "count": 87 }
+  },
+  {
+    "id": 6,
+    "title": "Women's Yoga Pants",
+    "price": 34.99,
+    "description": "Stretchable and comfortable yoga pants designed for all types of activities, from workouts to lounging at home. The soft elastic waistband ensures a snug fit without digging into your skin. Durable stitching and moisture‑wicking fabric keep you comfortable through every session.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/210/520",
+    "rating": { "rate": 4.3, "count": 130 }
+  },
+  {
+    "id": 7,
+    "title": "Portable Charger 10000mAh",
+    "price": 25.99,
+    "description": "This compact power bank ensures your devices stay charged on the go. With 10000mAh of capacity, it can recharge most smartphones multiple times. Dual‑USB output lets you charge two devices simultaneously, while built‑in safety features protect against overcharging and short circuits.",
+    "category": "electronics",
+    "image": "https://picsum.photos/300/265",
+    "rating": { "rate": 4.6, "count": 98 }
+  },
+  {
+    "id": 8,
+    "title": "Ceramic Coffee Mug",
+    "price": 12.99,
+    "description": "Start your day with your favorite coffee in this beautifully crafted ceramic mug. Its durable glaze finish resists stains and chips, making it perfect for everyday use. The comfortable handle ensures a secure grip, and its classic design blends seamlessly with any kitchen decor.",
+    "category": "home",
+    "image": "https://picsum.photos/600/510",
+    "rating": { "rate": 4.4, "count": 76 }
+  },
+  {
+    "id": 9,
+    "title": "Men's Classic T‑Shirt",
+    "price": 15.5,
+    "description": "This soft cotton t‑shirt combines everyday comfort with timeless style. Its breathable fabric keeps you cool, while the clean cut pairs with jeans, shorts, or layered under a jacket. Durable stitching ensures it holds up through many washes without fading or stretching.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/510/520",
+    "rating": { "rate": 4.0, "count": 110 }
+  },
+  {
+    "id": 10,
+    "title": "Women's Handbag",
+    "price": 49.99,
+    "description": "Elegant and spacious, this handbag features multiple compartments for all your essentials. The textured outer material adds durability, while the adjustable strap offers versatility for hand‑held or shoulder carrying. Perfect for both work and weekend outings.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.5, "count": 95 }
+  },
+  {
+    "id": 11,
+    "title": "LED Desk Lamp",
+    "price": 39.99,
+    "description": "Brighten your workspace with this adjustable LED desk lamp. Featuring multiple brightness levels and a flexible arm, it’s perfect for reading, writing, or working late. Energy‑efficient LEDs ensure a long lifespan, and the minimalist design matches any desk setup.",
+    "category": "home",
+    "image": "https://picsum.photos/370/603",
+    "rating": { "rate": 4.6, "count": 82 }
+  },
+  {
+    "id": 12,
+    "title": "Wireless Mouse",
+    "price": 18.99,
+    "description": "This ergonomic wireless mouse features a comfortable grip and reliable optical tracking. Its compact design makes it perfect for laptops and travel, while the plug‑and‑play USB receiver ensures easy setup. Long battery life keeps you working without interruption.",
+    "category": "electronics",
+    "image": "https://picsum.photos/710/670",
+    "rating": { "rate": 4.4, "count": 67 }
+  },
+  {
+    "id": 13,
+    "title": "Men's Running Shorts",
+    "price": 22.99,
+    "description": "Lightweight and breathable running shorts designed for active lifestyles. The moisture‑wicking fabric keeps you dry, while the elastic waistband provides a secure fit. Perfect for gym sessions, runs, or casual wear on hot days.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/767/373",
+    "rating": { "rate": 4.2, "count": 54 }
+  },
+  {
+    "id": 14,
+    "title": "Women's Summer Sandals",
+    "price": 27.99,
+    "description": "These comfortable summer sandals feature soft straps and a cushioned footbed for all‑day wear. Lightweight yet supportive, they’re perfect for beach days or casual strolls. The easy‑to‑fasten design ensures they stay secure with every step.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/450/200",
+    "rating": { "rate": 4.3, "count": 88 }
+  },
+  {
+    "id": 15,
+    "title": "Electric Toothbrush",
+    "price": 59.99,
+    "description": "This rechargeable electric toothbrush offers multiple cleaning modes for a personalized brushing experience. Its powerful oscillations remove plaque effectively, while the built‑in timer helps you brush for the dentist‑recommended duration. The sleek handle and long battery life make daily oral care effortless.",
+    "category": "electronics",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.7, "count": 140 }
+  },
+  {
+    "id": 16,
+    "title": "Memory Foam Pillow",
+    "price": 32.5,
+    "description": "Get a more restful night’s sleep with this supportive memory foam pillow. Contouring to your head and neck, it helps reduce pressure points while supporting proper spinal alignment. The breathable cover keeps you comfortable even on warmer nights.",
+    "category": "home",
+    "image": "https://picsum.photos/500/263",
+    "rating": { "rate": 4.6, "count": 120 }
+  },
+  {
+    "id": 17,
+    "title": "Stainless Steel Water Bottle",
+    "price": 19.99,
+    "description": "This insulated stainless steel bottle keeps beverages cold for hours. Durable and leak‑proof, it’s designed for daily use at work, school, or workouts. The sleek finish resists fingerprints, and the wide mouth makes it easy to add ice or clean.",
+    "category": "home",
+    "image": "https://picsum.photos/721/513",
+    "rating": { "rate": 4.5, "count": 102 }
+  },
+  {
+    "id": 18,
+    "title": "Men's Formal Shirt",
+    "price": 35.99,
+    "description": "Look polished for work or events with this slim‑fit formal shirt. The breathable cotton blend ensures comfort throughout long days, and the crisp collar holds its shape wash after wash. Pair it with trousers or jeans for versatile styling options.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.2, "count": 66 }
+  },
+  {
+    "id": 19,
+    "title": "Women's Necklace",
+    "price": 15.99,
+    "description": "Add a delicate touch to any outfit with this elegant necklace. The finely crafted chain and polished charm catch the light beautifully, making it perfect for daily wear or gifting. Lightweight and comfortable, it’s a versatile accessory for every wardrobe.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/777/634",
+    "rating": { "rate": 4.3, "count": 74 }
+  },
+  {
+    "id": 20,
+    "title": "Bluetooth Speaker",
+    "price": 45.99,
+    "description": "Take your music anywhere with this portable Bluetooth speaker. Featuring rich, powerful sound and a long‑lasting battery, it’s great for outdoor gatherings, workouts, or travel. Bluetooth connectivity pairs easily with all your devices for effortless listening.",
+    "category": "electronics",
+    "image": "https://picsum.photos/515/362",
+    "rating": { "rate": 4.6, "count": 88 }
+  },
+  {
+    "id": 21,
+    "title": "Gaming Keyboard",
+    "price": 59.99,
+    "description": "Enhance your gaming setup with this mechanical keyboard featuring customizable RGB backlighting. Tactile switches deliver responsive typing and gaming performance, while the ergonomic design keeps your hands comfortable during long sessions. A detachable wrist rest adds extra comfort.",
+    "category": "electronics",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.5, "count": 88 }
+  },
+  {
+    "id": 22,
+    "title": "Men's Denim Jacket",
+    "price": 69.99,
+    "description": "This classic denim jacket combines rugged durability with timeless style. Featuring reinforced stitching and a comfortable fit, it layers perfectly over shirts or hoodies. Its versatile wash pairs well with almost any outfit, making it a seasonal staple.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.3, "count": 65 }
+  },
+  {
+    "id": 23,
+    "title": "Women's Winter Coat",
+    "price": 120.0,
+    "description": "Stay warm and stylish with this premium winter coat. Insulated with high‑quality padding and featuring a water‑resistant exterior, it’s perfect for cold, wet weather. The tailored silhouette and fur‑trimmed hood add both fashion and function.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.7, "count": 58 }
+  },
+  {
+    "id": 24,
+    "title": "Noise Cancelling Earbuds",
+    "price": 79.99,
+    "description": "Enjoy immersive sound with active noise cancelling earbuds. The ergonomic design ensures a secure fit, perfect for commuting, workouts, or travel. With hours of battery life and fast charging support, they keep your music playing all day.",
+    "category": "electronics",
+    "image": "https://picsum.photos/516/125",
+    "rating": { "rate": 4.4, "count": 105 }
+  },
+  {
+    "id": 25,
+    "title": "Yoga Mat",
+    "price": 25.0,
+    "description": "This non‑slip yoga mat offers excellent cushioning and stability for all levels of practice. Its textured surface ensures secure footing during poses, and the lightweight design makes it easy to roll up and carry. A great companion for home workouts and studio classes.",
+    "category": "home",
+    "image": "https://picsum.photos/484/264",
+    "rating": { "rate": 4.6, "count": 70 }
+  },
+  {
+    "id": 26,
+    "title": "Men's Hoodie",
+    "price": 39.99,
+    "description": "Stay warm and comfy with this soft cotton hoodie. The relaxed fit allows for layering, while the branded drawstrings and kangaroo pocket add casual flair. Perfect for chilly days, lounging at home, or weekend outings.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.2, "count": 88 }
+  },
+  {
+    "id": 27,
+    "title": "Women's Blouse",
+    "price": 32.99,
+    "description": "A versatile blouse that transitions effortlessly from workdays to weekend plans. Soft fabric and delicate detailing add a feminine touch, while the lightweight feel keeps you comfortable all day. Pair with skirts or trousers for elegant style.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/727/213",
+    "rating": { "rate": 4.3, "count": 55 }
+  },
+  {
+    "id": 28,
+    "title": "Laptop Stand",
+    "price": 29.99,
+    "description": "Ergonomically elevate your laptop to improve posture and reduce neck strain. This sturdy stand supports a range of laptop sizes and features anti‑slip pads for secure positioning. Its lightweight construction makes it easy to transport between home and office.",
+    "category": "electronics",
+    "image": "https://picsum.photos/662/624",
+    "rating": { "rate": 4.5, "count": 92 }
+  },
+  {
+    "id": 29,
+    "title": "Coffee Table Book",
+    "price": 45.0,
+    "description": "This beautifully illustrated coffee table book showcases stunning photography and engaging narratives. Perfect for guests to browse or as a gift for enthusiasts of art and design. Its premium paper and elegant layout make it a timeless addition to your home library.",
+    "category": "home",
+    "image": "https://picsum.photos/210/320",
+    "rating": { "rate": 4.6, "count": 33 }
+  },
+  {
+    "id": 30,
+    "title": "Bluetooth Car Adapter",
+    "price": 19.99,
+    "description": "Bring wireless convenience to your car with this Bluetooth adapter. Stream music and take calls hands‑free through your car’s stereo system. Compact and easy to install, it pairs quickly with your phone and offers reliable connectivity on the go.",
+    "category": "electronics",
+    "image": "https://picsum.photos/731/155",
+    "rating": { "rate": 4.4, "count": 60 }
+  },
+  {
+    "id": 31,
+    "title": "Men's Chinos",
+    "price": 49.99,
+    "description": "These slim‑fit chinos offer a relaxed yet polished look. Built from stretch cotton for comfort and durability, they’re ideal for office or weekend wear. Classic design with modern tailoring makes them a versatile staple in any wardrobe.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/627/722",
+    "rating": { "rate": 4.2, "count": 77 }
+  },
+  {
+    "id": 32,
+    "title": "Women's Scarf",
+    "price": 14.99,
+    "description": "Add warmth and style to any outfit with this soft, patterned scarf. Its ample size allows for versatile wrapping styles, while the silky texture feels gentle against the skin. Perfect for cool mornings or breezy evenings.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/157/622",
+    "rating": { "rate": 4.5, "count": 43 }
+  },
+  {
+    "id": 33,
+    "title": "Smart Home Light Bulb",
+    "price": 22.99,
+    "description": "Control your home lighting from your phone with this smart bulb. Choose from millions of colors and adjust brightness to suit any mood. Compatible with popular smart home platforms and easy to install in standard fixtures.",
+    "category": "electronics",
+    "image": "https://picsum.photos/117/732",
+    "rating": { "rate": 4.7, "count": 80 }
+  },
+  {
+    "id": 34,
+    "title": "Ceramic Vase",
+    "price": 27.99,
+    "description": "Enhance your home decor with this decorative ceramic vase. Its smooth finish and elegant silhouette make it perfect for floral arrangements or as a standalone accent piece. Durable crafting ensures it retains beauty for years.",
+    "category": "home",
+    "image": "https://picsum.photos/627/322",
+    "rating": { "rate": 4.4, "count": 41 }
+  },
+  {
+    "id": 35,
+    "title": "Men's Sunglasses",
+    "price": 35.99,
+    "description": "Classic UV‑protective sunglasses featuring a sturdy frame and polarized lenses. Designed to reduce glare and provide comfortable all‑day wear, they’re perfect for driving, beach days, or weekend adventures. Timeless style pairs with any outfit.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/237/662",
+    "rating": { "rate": 4.3, "count": 65 }
+  },
+  {
+    "id": 36,
+    "title": "Women's Hand Cream",
+    "price": 12.99,
+    "description": "Keep your hands soft and nourished with this rich hand cream. Blended with natural moisturizers, it absorbs quickly without leaving a greasy residue. Light floral scent adds a pleasant touch to daily care.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/227/562",
+    "rating": { "rate": 4.6, "count": 50 }
+  },
+  {
+    "id": 37,
+    "title": "USB‑C Hub",
+    "price": 29.99,
+    "description": "Expand your laptop’s connectivity with this USB‑C hub. Multiple ports allow connection of USB drives, displays, and peripherals in one compact device. Plug‑and‑play design requires no extra drivers, making it ideal for travel or office setups.",
+    "category": "electronics",
+    "image": "https://picsum.photos/627/722",
+    "rating": { "rate": 4.5, "count": 72 }
+  },
+  {
+    "id": 38,
+    "title": "Floor Lamp",
+    "price": 89.99,
+    "description": "Add warm ambient light to your living space with this modern floor lamp. Its sleek profile fits easily into corners or behind sofas, while the adjustable shade lets you direct light where you need it. Durable construction ensures long‑lasting style.",
+    "category": "home",
+    "image": "https://picsum.photos/227/322",
+    "rating": { "rate": 4.7, "count": 36 }
+  },
+  {
+    "id": 39,
+    "title": "Men's Leather Belt",
+    "price": 24.99,
+    "description": "This durable leather belt features a classic buckle and refined finish, perfect for both casual and formal outfits. The sturdy construction offers reliable wear, and its timeless design pairs with everything from denim to dress trousers.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/627/432",
+    "rating": { "rate": 4.2, "count": 55 }
+  },
+  {
+    "id": 40,
+    "title": "Women's Sunglasses",
+    "price": 29.99,
+    "description": "Chic and comfortable sunglasses with UV protection for everyday wear. Lightweight frames and polarized lenses reduce glare and enhance clarity. Ideal for driving, outdoor brunches, or weekend getaways.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/227/522",
+    "rating": { "rate": 4.3, "count": 48 }
+  },
+  {
+    "id": 41,
+    "title": "Smart Thermostat",
+    "price": 129.99,
+    "description": "Take control of your home’s temperature with this smart thermostat. Schedule temperature changes from your phone, save on energy bills, and enjoy intuitive controls. Works with major smart home systems for seamless integration.",
+    "category": "electronics",
+    "image": "https://picsum.photos/627/322",
+    "rating": { "rate": 4.7, "count": 60 }
+  },
+  {
+    "id": 42,
+    "title": "Decorative Wall Clock",
+    "price": 39.99,
+    "description": "This stylish wall clock blends form and function with an eye‑catching design. Large, easy‑to‑read numerals make telling time effortless, while its durable frame keeps it looking great for years. A perfect accent for living rooms or kitchens.",
+    "category": "home",
+    "image": "https://picsum.photos/627/722",
+    "rating": { "rate": 4.5, "count": 33 }
+  },
+  {
+    "id": 43,
+    "title": "Men's Sports Watch",
+    "price": 69.99,
+    "description": "Rugged and reliable, this sports watch offers multiple functions including stopwatch, timer, and water resistance. Its bold design pairs well with activewear, while the adjustable strap keeps it secure during workouts. Ideal for athletes or outdoor enthusiasts.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/327/222",
+    "rating": { "rate": 4.4, "count": 44 }
+  },
+  {
+    "id": 44,
+    "title": "Women's Tote Bag",
+    "price": 54.99,
+    "description": "This spacious tote bag offers plenty of room for daily essentials and more. Durable straps and reinforced stitching ensure reliability, while its chic design complements any outfit. Perfect for work, school, or travel.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/527/722",
+    "rating": { "rate": 4.6, "count": 50 }
+  },
+  {
+    "id": 45,
+    "title": "Portable Fan",
+    "price": 19.99,
+    "description": "Stay cool on the go with this compact portable fan. Featuring multiple speed settings and a rechargeable battery, it’s perfect for outdoor activities, offices, or bedside use. Lightweight and quiet, it keeps air circulating wherever you need it.",
+    "category": "home",
+    "image": "https://picsum.photos/327/322",
+    "rating": { "rate": 4.5, "count": 27 }
+  },
+  {
+    "id": 46,
+    "title": "Wireless Charger",
+    "price": 29.99,
+    "description": "Simplify charging with this fast wireless charger compatible with most Qi‑enabled devices. Its slim design fits easily on desks or nightstands, and the non‑slip surface keeps your phone secure. LED indicators let you know when your device is fully charged.",
+    "category": "electronics",
+    "image": "https://picsum.photos/627/722",
+    "rating": { "rate": 4.6, "count": 78 }
+  },
+  {
+    "id": 47,
+    "title": "Men's Socks Pack",
+    "price": 14.99,
+    "description": "This pack of cotton socks offers comfort and durability for everyday wear. Breathable and soft, they keep feet dry and comfortable through all activities. Elastic cuffs ensure a snug fit without slipping.",
+    "category": "men's clothing",
+    "image": "https://picsum.photos/227/722",
+    "rating": { "rate": 4.3, "count": 60 }
+  },
+  {
+    "id": 48,
+    "title": "Women's Bracelet",
+    "price": 19.99,
+    "description": "Add a subtle sparkle to any outfit with this elegant bracelet. The polished finish and delicate design make it perfect for daily wear or special occasions. Lightweight and comfortable, it layers nicely with other jewelry.",
+    "category": "women's clothing",
+    "image": "https://picsum.photos/627/322",
+    "rating": { "rate": 4.5, "count": 41 }
+  },
+  {
+    "id": 49,
+    "title": "Electric Kettle",
+    "price": 39.99,
+    "description": "Boil water quickly with this fast‑heating electric kettle featuring auto shut‑off and boil‑dry protection. Its wide mouth makes filling and cleaning easy, and the durable body ensures long‑lasting performance. A great addition to any kitchen.",
+    "category": "home",
+    "image": "https://picsum.photos/627/722",
+    "rating": { "rate": 4.6, "count": 55 }
+  },
+  {
+    "id": 50,
+    "title": "Bluetooth Headset",
+    "price": 49.99,
+    "description": "Stay connected on calls and enjoy music with this comfortable Bluetooth headset. Soft ear cushions provide all‑day comfort, while clear‑sound technology ensures crisp audio. Long battery life makes it ideal for travel or long workdays.",
+    "category": "electronics",
+    "image": "https://picsum.photos/347/742",
+    "rating": { "rate": 4.5, "count": 64 }
+  }
+]
