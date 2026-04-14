@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex: 0 0 250px;
+    ::ng-deep .ngx-slider-span .ngx-slider-bar {
+        background-color: #ffd9e1;
+    }
+}

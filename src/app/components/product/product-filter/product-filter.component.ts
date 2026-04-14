@@ -1,34 +1,38 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { outputFromObservable } from '@angular/core/rxjs-interop';
-import { FormControl, FormGroup } from '@angular/forms';
-import { map } from 'rxjs';
+import { Component, effect, inject, signal } from '@angular/core';
+import { SearchComponent } from './components/search/search.component';
+import { CategoryComponent } from './components/category/category.component';
+import { ProductFilterService } from './product-filter.service';
+import { PriceRangeComponent } from './components/price-range/price-range.component';
+import { Store } from '@ngrx/store';
+import { selectFilterState } from '../../../core/store/filter/filter.selectors';
+import { setCategoryFilter, setPriceRangeFilter, setSearchFilter } from '../../../core/store/filter/filter.actions';
+import { initialFilterState } from '../../../core/store/filter/filter.reducer';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-product-filter',
     templateUrl: './product-filter.component.html',
     styleUrls: ['./product-filter.component.scss'],
+    imports: [PriceRangeComponent, SearchComponent, CategoryComponent],
+    providers: [ProductFilterService]
 })
 export class ProductFilterComponent {
-    protected filterFormGroup = new FormGroup({
-        keywords: new FormControl(),
-        numberOfUsers: new FormControl(),
-        maxStepCount: new FormControl(),
-    });
 
-    filterChange = outputFromObservable(
-        this.filterFormGroup.valueChanges.pipe(
-            map((value) => value),
-        ),
-    );
+    private productFilterService = inject(ProductFilterService);
+    keywords = this.productFilterService.keywords;
+    priceRange = this.productFilterService.priceRange;
+    category = this.productFilterService.category;
 
-    @ViewChild('input') input!: ElementRef<HTMLInputElement>;
-  myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
-  filteredOptions: string[] = this.options.slice();
+    updateKeywords(value: string | null) {
+        this.productFilterService.updateKeywords(value);
+    }
 
-  filter(): void {
-    const filterValue = this.input.nativeElement.value.toLowerCase();
-    this.filteredOptions = this.options.filter(o => o.toLowerCase().includes(filterValue));
-  }
+    updateCategory(category: string | null) {
+        this.productFilterService.updateCategory(category);
+    }
+
+    updatePrice(range: { minPrice: number | null; maxPrice: number | null }) {
+        this.productFilterService.updatePrice(range);
+    }
 }
 

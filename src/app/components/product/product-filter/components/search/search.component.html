@@ -1,0 +1,5 @@
+<mat-form-field appearance="fill">
+    <mat-icon matPrefix>search</mat-icon>
+    <mat-label>Product Name</mat-label>
+    <input matInput placeholder="Type a product name" [value]="value()" (input)="valueChange.emit($event.target.value)" />
+</mat-form-field>

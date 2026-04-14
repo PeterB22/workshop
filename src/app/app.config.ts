@@ -11,6 +11,7 @@ import { ProductSearchService } from './core/providers/product-search.service';
 import { cartReducer } from './core/store/cart/cart.reducer';
 import { LocalStorageService } from './core/providers/localstorage.service';
 import { CartEffects } from './core/store/cart/cart.effects';
+import { filterReducer } from './core/store/filter/filter.reducer';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -21,7 +22,8 @@ export const appConfig: ApplicationConfig = {
         provideRouter(routes),
         provideStore({
             product: productReducer,
-            cart: cartReducer
+            cart: cartReducer,
+            filter: filterReducer
         }),
         provideEffects([ProductsEffects, CartEffects]),
         provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
