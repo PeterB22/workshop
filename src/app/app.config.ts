@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZonelessChangeDetection, isDevMode } from '@angular/core';
+import { ApplicationConfig, provideZonelessChangeDetection, isDevMode, provideZoneChangeDetection } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { provideStore } from '@ngrx/store';
@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
         ProductSearchService,
         LocalStorageService,
         provideHttpClient(),
-        provideZonelessChangeDetection(),
+        provideZoneChangeDetection({ eventCoalescing: true }),
         provideRouter(routes),
         provideStore({
             product: productReducer,
