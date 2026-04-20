@@ -3,11 +3,6 @@ import { SearchComponent } from './components/search/search.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ProductFilterService } from './product-filter.service';
 import { PriceRangeComponent } from './components/price-range/price-range.component';
-import { Store } from '@ngrx/store';
-import { selectFilterState } from '../../../core/store/filter/filter.selectors';
-import { setCategoryFilter, setPriceRangeFilter, setSearchFilter } from '../../../core/store/filter/filter.actions';
-import { initialFilterState } from '../../../core/store/filter/filter.reducer';
-import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-product-filter',
