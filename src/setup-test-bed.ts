@@ -1,6 +1,8 @@
 /// <reference types="vitest/globals" />
 
-import { NgModule, provideZonelessChangeDetection } from '@angular/core';
+import 'zone.js';
+import 'zone.js/testing';
+import { NgModule, provideZoneChangeDetection, provideZonelessChangeDetection } from '@angular/core';
 import { getTestBed } from '@angular/core/testing';
 import { beforeEach, afterEach } from 'vitest';
 import {
@@ -27,7 +29,7 @@ export function setUpTestBed() {
     return;
   }
 
-  @NgModule({ providers: [provideZonelessChangeDetection()] })
+  @NgModule({ providers: [provideZoneChangeDetection()] })
   class TestModule {}
 
   testBed.initTestEnvironment(
