@@ -5,6 +5,7 @@ import 'zone.js/testing';
 import { NgModule, provideZoneChangeDetection, provideZonelessChangeDetection } from '@angular/core';
 import { getTestBed } from '@angular/core/testing';
 import { beforeEach, afterEach } from 'vitest';
+import '@testing-library/jest-dom/vitest';
 import {
   BrowserTestingModule,
   platformBrowserTesting,
