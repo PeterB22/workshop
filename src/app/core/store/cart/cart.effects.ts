@@ -3,7 +3,7 @@ import { LocalStorageService } from '../../providers/localstorage.service';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { select, Store } from '@ngrx/store';
 import { checkoutCart, clearCart } from './cart.actions';
-import { first, map, switchMap, tap, withLatestFrom } from 'rxjs';
+import { first, map, switchMap, tap } from 'rxjs';
 import { selectCartItems } from './cart.selectors';
 
 @Injectable()
@@ -16,11 +16,10 @@ export class CartEffects {
         this.actions$.pipe(
             ofType(checkoutCart),
             switchMap(() => this.store.pipe(select(selectCartItems), first())),
-            map( items => {
+            tap((items) => {
                 const validItems = items ? items.filter(item => item.quantity > 0) : [];
                 this.localStorageService.setItem('cart', JSON.stringify(validItems));
-                return clearCart();
-            })
-        ),
-    );
+            }),
+            map(() => clearCart())
+    ));
 }
