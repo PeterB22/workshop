@@ -1,12 +1,13 @@
 import { firstValueFrom, of, throwError } from 'rxjs';
 import { ProductsEffects } from './product.effects';
+import { describe, it, expect, vi } from 'vitest';
 import { TestBed } from '@angular/core/testing';
 import { Actions } from '@ngrx/effects';
 import { ProductSearchService } from '../../providers/product-search.service';
 import { loadProducts, loadProductsFailure, loadProductsSuccess } from './product.actions';
 import { Product } from '../../models/product.model';
 
-describe.only(ProductsEffects.name, () => {
+describe(ProductsEffects.name, () => {
     it('should dispatch loadProductsSuccess', async () => {
         const productsMock: Product[] = [{ id: '1', name: 'Laptop', price: 1000, description: 'A powerful laptop', imageUrl: 'laptop.jpg', category: 'electronics', rating: { rate: 4.5, count: 100 } }];
 
