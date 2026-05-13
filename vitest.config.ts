@@ -6,18 +6,18 @@ export default defineConfig({
     globals: false,
     environment: 'jsdom',
     setupFiles: ['src/test-setup.ts'],
-    coverage: {
+    /* coverage: {
       provider: 'v8',
       reporter: ['text', 'html', 'lcov', 'json-summary'],
       reportsDirectory: './coverage',
       enabled: true,
       reportOnFailure: true
-    },
-    browser: {
+    }, */
+    /* browser: {
       enabled: true,
       provider: playwright(),
       instances: [{ browser: 'chromium' }],
-    }
+    } */
   }
 });
 
