@@ -13,7 +13,7 @@ describe(ProductDetailComponent.name, () => {
 
   it('should add product to cart and open snackbar', async () => {
     const { user, snackBarSpy } = await setup();
-    const button = await screen.findByRole('button', { name: 'Add to Cart', hidden: true });
+    const button = await screen.getByRole('button', { name: 'Add to Cart', hidden: true });
     debugger;
     await user.click(button);
     expect(snackBarSpy.open).toHaveBeenCalledWith(
