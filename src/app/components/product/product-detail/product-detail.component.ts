@@ -5,18 +5,22 @@ import { Product } from '../../../core/models/product.model';
 import { CurrencyPipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { ProductDatasource } from './product-datasource.service';
 import { ProductImageComponent } from '../../../shared/product-image/product-image.component';
+import { PRODUCT_DATASOURCE } from './product-datasource-types';
+import { ProductDatasource } from './product-datasource.service';
 
 @Component({
     selector: 'app-product-detail-component',
     templateUrl: './product-detail.component.html',
     styleUrls: ['./product-detail.component.scss'],
     imports: [CurrencyPipe, MatIconModule, NgRatings, MatButtonModule, ProductImageComponent],
-    providers: [ProductDatasource]
+    providers: [{
+      provide: PRODUCT_DATASOURCE,
+      useClass: ProductDatasource
+    }]
 })
 export class ProductDetailComponent {
-    private productDs = inject(ProductDatasource);
+    private productDs = inject(PRODUCT_DATASOURCE);
     private snackBar = inject(MatSnackBar);
 
     product: Signal<Product | undefined> = this.productDs.product

@@ -1,51 +1,50 @@
-import { computed, Injectable, Provider, signal } from '@angular/core';
+import { Injectable, Provider, signal, WritableSignal } from '@angular/core';
 import { CartItem } from '../../../core/store/cart/cart.reducer';
 import { CartDatasource, CartDatasourceDef } from './cart-detail.datasource.service';
 
 @Injectable()
 export class CartDatasourceFake implements CartDatasourceDef {
 
-    checkout(): void {
-        throw new Error('Method not implemented.');
-    }
-    removeItem(id: string): void {
-        throw new Error('Method not implemented.');
-    }
-    increaseQuantity(id: string): void {
-        throw new Error('Method not implemented.');
-    }
-    decreaseQuantity(id: string): void {
-        throw new Error('Method not implemented.');
-    }
-    private _cartItems = signal<CartItem[]>([]);
+  cartItems: WritableSignal<CartItem[] | undefined> = signal([]);
+  total: WritableSignal<number> = signal(0);
+  isCheckoutDisabled: WritableSignal<boolean | undefined> = signal(undefined);
 
-    cartItems = this._cartItems.asReadonly();
 
-    total = computed(() =>
-        this._cartItems().reduce(
-            (sum, item) =>
-                sum + item.product.price * item.quantity,
-            0
-        )
-    );
-
-    isCheckoutDisabled = computed(() =>
-        this._cartItems().length === 0 ||
-        this.total() === 0
-    );
-
-    setCartItems(items: CartItem[]) {
-        this._cartItems.set(items);
+  checkout(): void {
+    throw new Error('Method not implemented.');
+  }
+  removeItem(id: string): void {
+    this.cartItems()?.filter(cartItem => cartItem.product.id === id);
+  }
+  increaseQuantity(id: string): void {
+    const matchingCartItem = this.cartItems()?.find(cartItem => cartItem.product.id === id);
+    if (matchingCartItem) {
+      matchingCartItem.quantity += 1;
     }
+  }
+  decreaseQuantity(id: string): void {
+    const matchingCartItem = this.cartItems()?.find(cartItem => cartItem.product.id === id);
+    if (matchingCartItem) {
+      matchingCartItem.quantity += 1;
+    }
+  }
+
+  setCartItems(items: CartItem[]) {
+    this.cartItems.set(items);
+  }
+
+  setCheckoutDisabled(isDisabled: boolean) {
+    this.isCheckoutDisabled.set(isDisabled);
+  }
 
 }
 
 export function provideCartDatasourceFake(): Provider[] {
-    return [
-        CartDatasourceFake,
-        {
-            provide: CartDatasource,
-            useClass: CartDatasourceFake,
-        },
-    ];
+  return [
+    CartDatasourceFake,
+    {
+      provide: CartDatasource,
+      useClass: CartDatasourceFake,
+    },
+  ];
 };

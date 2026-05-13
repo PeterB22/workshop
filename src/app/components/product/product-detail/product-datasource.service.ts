@@ -9,9 +9,10 @@ import { addToCart } from '../../../core/store/cart/cart.actions';
 import { selectIsInCart } from '../../../core/store/cart/cart.selectors';
 import { selectProduct } from '../../../core/store/product/product.actions';
 import { selectProductById } from '../../../core/store/product/product.selectors';
+import { ProductDatasourceDef } from './product-datasource-types';
 
 @Injectable()
-export class ProductDatasource {
+export class ProductDatasource implements ProductDatasourceDef {
     private store = inject(Store);
     private route = inject(ActivatedRoute);
 
