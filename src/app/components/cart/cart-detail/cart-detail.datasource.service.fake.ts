@@ -1,6 +1,7 @@
 import { Injectable, Provider, signal, WritableSignal } from '@angular/core';
 import { CartItem } from '../../../core/store/cart/cart.reducer';
-import { CartDatasource, CartDatasourceDef } from './cart-detail.datasource.service';
+import { CartDatasource } from './cart-detail.datasource.service';
+import { CART_DATASOURCE, CartDatasourceDef } from './cart-detail-types';
 
 @Injectable()
 export class CartDatasourceFake implements CartDatasourceDef {
@@ -48,3 +49,14 @@ export function provideCartDatasourceFake(): Provider[] {
     },
   ];
 };
+
+export function provideCartDatasourceFakeStandalone() {
+  const fake = new CartDatasourceFake();
+  return {
+    fake,
+    provider: {
+      provide: CART_DATASOURCE,
+      useValue: fake
+    }
+  };
+}

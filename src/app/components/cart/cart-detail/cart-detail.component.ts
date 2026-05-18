@@ -6,21 +6,25 @@ import { CartItem } from '../../../core/store/cart/cart.reducer';
 import { CartItemQuantityComponent } from '../cart-item-quantity/cart-item-quantity.component';
 import { OverlayRef } from '@angular/cdk/overlay';
 import { CartDatasource } from './cart-detail.datasource.service';
+import { CART_DATASOURCE } from './cart-detail-types';
 
 @Component({
     selector: 'app-cart-detail',
     templateUrl: './cart-detail.component.html',
     styleUrls: ['./cart-detail.component.scss'],
     imports: [CartItemComponent, CartItemQuantityComponent, CurrencyPipe, MatButtonModule],
-    providers: [CartDatasource]
+    providers: [{
+      provide: CART_DATASOURCE,
+      useClass: CartDatasource
+    }]
 })
 export class CartDetailComponent {
 
-    private cartDs = inject(CartDatasource);
+    private cartDs = inject(CART_DATASOURCE);
     private overlayRef = inject(OverlayRef);
     cartItems: Signal<CartItem[] | undefined> = this.cartDs.cartItems;
-    total: Signal<number> = this.cartDs.total;
-    isCheckoutDisabled: Signal<boolean> = this.cartDs.isCheckoutDisabled;
+    total: Signal<number | undefined> = this.cartDs.total;
+    isCheckoutDisabled: Signal<boolean | undefined> = this.cartDs.isCheckoutDisabled;
     autoCloseOverlay = effect(() => {
         if (this.cartItems() && this.cartItems()!.length === 0) {
             this.overlayRef.dispose();

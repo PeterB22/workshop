@@ -5,16 +5,7 @@ import { select, Store } from "@ngrx/store";
 import { CartItem } from "../../../core/store/cart/cart.reducer";
 import { selectCartItems } from "../../../core/store/cart/cart.selectors";
 import { checkoutCart, removeFromCart } from "../../../core/store/cart/cart.actions";
-
-export interface CartDatasourceDef {
-  cartItems: Signal<CartItem[] | undefined>;
-  total: Signal<number | undefined>;
-  isCheckoutDisabled: Signal<boolean | undefined>;
-  checkout(): void;
-  removeItem(id: string): void;
-  increaseQuantity(id: string): void;
-  decreaseQuantity(id: string): void;
-}
+import { CartDatasourceDef } from './cart-detail-types';
 
 @Injectable()
 export class CartDatasource implements CartDatasourceDef {
